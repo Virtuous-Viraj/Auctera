@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+
+*, /*asterick is known as universal selector*/ 
+*:after,  /*p::after	Insert something after the content of each <p> element*/ 
+*:before {
+    -webkit-box-sizing: border-box;/*The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.*/
+    box-sizing: border-box; /*Include padding and border in the element's total width and height*/
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+h1,
+
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1,
+h5,
+h6 {
+    color: #2c3145;
+}
+.banner{
+    color:#f3f3f3;
+}
+h2{
+    color: rgb(211, 211, 37);
+}
+
+/*===== Variable Define =====*/
+:root { /*Defining variables*/
+    --primary-color: #000;
+    --secondary-color: #9f5ba4;
+    --third-color: #f3f3f3;
+    --four-color: #848484;
+    --text-color: #fff;
+    --black-light-color: #2f2f2f;
+}
+
+html { /*contains whole elements*/
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    color: #d3bebe;
+}
+
+a,
+a:hover { /*The text-decoration shorthand CSS property sets the appearance of decorative lines on text*/
+    text-decoration: none;
+}
+
+ul, /*all lists*/
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/*=== Header CSS ===*/
+.header{
+    background-color:var(--text-color);
+    /* z-index:100; */
+    padding:0.625rem;
+    box-shadow: 0px 0.125rem 0.625rem rgb(66, 59, 59);
+}
+/* uss class ke parent se usko access karke modify karte hai */
+/* plugins ko kabhibhi direct modify nahi karte uska ek class leke karte hai */
+.header .navbar-nav a.nav-link{/*anchor pe hamne grouping ki hai*/
+    position:relative;
+    padding:0.8rem 1.2rem;
+    color:var(--text-color);
+    -webkit-transition:font-weight 0.3s ease-in-out;
+    -moz-transition:font-weight 0.3s ease-in-out;
+    -ms-transition:font-weight 0.3s ease-in-out;
+    -o-transition:font-weight 0.3s ease-in-out;
+    transition:font-weight 0.3s ease-in-out;
+}
+.header .navbar-nav a.nav-link.active{
+    font-weight: 600;
+    transition:font-weight 0.3s ease-in-out;
+}
+.header .navbar-nav a.nav-link::after{/*before after psuedo selector*/
+    content:'';
+    display:block;
+    width:0%;
+    height:0.1rem;
+    box-sizing: border-box;
+    background-color:var(--secondary-color);
+    transition:width .3s;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, -50%);
+    bottom:0;
+}
+.header .navbar-nav a.nav-link:hover::after,/*in dono mai se ek hoga toh wo hoga*/
+.header .navbar-nav a.nav-link.active::after{
+    width:40%;
+    transition:width .3s;
+}
+.header .navbar-toggler{
+    padding:.25rem 0rem;
+}
+
+/*=== Banner Design ===*/
+.bg-hero{
+    background-image: url("/images/s3.png");
+    background-position: center right;
+    min-height:50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path:polygon(68% 0, 100% 0, 100% 97%, 3% 100%, 0 100%, 0 0);
+    animation: xfade 16s 2s infinite;
+    -webkit-animation: xfade 16s 2s infinite;
+    transition: all 4s ease-in-out;
+    -webkit-transition: all 4s ease-in-out;
+    -moz-transition: all 4s ease-in-out;
+    -ms-transition: all 4s ease-in-out;
+    -o-transition: all 4s ease-in-out;
+    margin:5px 5px 5px 5px;
+
+}  
+
+.banner_content h4{
+    font-family: sans-serif, cursive;
+    /* font-family: 'Dancing Script', sans-serif; */
+    padding-top:8rem;
+    font-weight: 700;
+    font-size:2.5rem;
+}
+
+.banner_content p{
+    color: antiquewhite;
+    font-family: 'Rubik', sans-serif;
+}
+
+.banner_content h2{
+    font-size:4rem;
+    font-weight:600;
+    padding:0.8rem 0;
+    width:80%;
+}
+
+.btnx{
+    width: 40%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* color: #fff; */
+    font-style: 'Runik';
+}
+
+.btnx:hover{
+    
+    /* clip-path:polygon(40% 15%, 77% 15%, 100% 10%, 100% 90%, 75% 85%, 40% 85%, 30% 100%, 0% 50%, 0 50%, 30% 0%); */
+    background-color: rgb(178, 212, 75);
+}  
+
+.live{
+    background-color: #395B64;
+    background-image: url("/images/black_1.webp");
+    height:60%px;
+}
+
+.card-img-top{
+    height:30%;
+}
+/* .card{
+    background-color: rgb(90, 84, 84);
+    color: rgb(90, 84, 84);
+} */
+.services{
+    background-image: url("/images/black2.webp");
+    height: 40%;
+}
+.services h4{
+   color: rgb(198, 155, 26);
+}
+.section-head span{
+    display:inline-block;
+}
+.section-head{
+    margin-bottom: 4rem;
+}
+.section-head h1{
+    position:relative;
+    padding:0;
+    color:var(--text-color);
+    /* line-height: 1; */
+    /* letter-spacing: 0.019; */
+    /* font-size: 2.25 rem; */
+    font-weight: 700;
+    text-align: center;
+     margin-top: 2rem;
+     margin-top: 4rem;
+}
+.section-head h4,p{
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+.section-head  h3{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aliceblue;
+    margin-bottom: 0px;
+}
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.service-box{
+    margin-top: 0px;
+    width: 50%;
+    text-align: center;
+}
+.service-box h5{
+    color: white;
+}
+
+.footer_box{
+    background-color: #ffbe0b;
+    /* background-color: #f5cb5c; */
+}
+.mini-footer{
+    background-color: black;
+}
+.card:hover{
+    /* background-color:var(--secondary-color);
+    color:var(--text-color); */
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+}
+
+.footer{
+color: black;
+text-align: left;
+}
+
+
+/* .footer-menu ul{
+        font-weight: 400;
+} */
+
+.pt-2{
+    color:rgb(198, 155, 26);
+}
+.row{
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+ 
+}

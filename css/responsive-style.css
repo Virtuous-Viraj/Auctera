@@ -1,0 +1,32 @@
+/* Desktops/Laptops */
+@media (max-width:1200px){
+
+}
+
+@media (max-width:1030px){
+    /*=== Header Section ==*/
+    .header .navbar-nav a.nav-link::after{/*before after psuedo selector*/
+        content:'';
+        display:block;
+        width:0%;
+        height:0.1rem;
+        box-sizing: border-box;
+        background-color:var(--secondary-color);
+        transition:width .3s;
+        position:absolute;
+        left:20%;
+        transform:translate(-100% 100%);
+        bottom:0;
+    }
+}
+/* Tablet versions */
+@media (max-width:767px){
+    /*=== mobile ===*/
+    .header .navbar{
+        position : relative;
+    }
+}
+/* Mobile Versions */
+@media (max-width:576px){
+    
+}
