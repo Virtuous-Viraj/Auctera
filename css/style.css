@@ -118,7 +118,7 @@ ol {
 
 /*=== Banner Design ===*/
 .bg-hero{
-    background-image: url("/images/s3.png");
+    background-image: url("https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-position: center right;
     min-height:50%;
     background-size: cover;
@@ -171,7 +171,7 @@ ol {
 
 .live{
     background-color: #395B64;
-    background-image: url("/images/black_1.webp");
+    background-image: url("https://cdn.vectorstock.com/i/1000x1000/07/46/black-bricks-background-vector-22990746.webp");
     height:60%px;
 }
 
@@ -183,7 +183,7 @@ ol {
     color: rgb(90, 84, 84);
 } */
 .services{
-    background-image: url("/images/black2.webp");
+    background-image: url("https://i.pinimg.com/564x/28/0c/31/280c31c8b5c5bc9cb3b4f7459ccd953f.jpg");
     height: 40%;
 }
 .services h4{
